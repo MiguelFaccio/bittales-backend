@@ -25,7 +25,8 @@
     - Aplicativo móvel dedicado para acesso facilitado aos jogos.
  
 6- **Administração:**
- 
+    
+    - Painel administrativo para adicionar, remover e gerenciar usuários.
     - Painel administrativo para adicionar, remover e gerenciar jogos.
     - Sistema de monitoramento de uso e desempenho dos jogos.
 
@@ -56,3 +57,22 @@
  
     - O sistema deve ter uptime de 99,9%.
     - Backups regulares de dados devem ser realizados para evitar perda de informações.
+
+
+## Tarefas
+
+- [ ] Implementar o endpoint para a criação de novos usuários.
+- [ ] Implementar o endpoint para a criação de novos jogos.
+- [ ] Implementar o endpoint para a atualizar os usuários.
+- [ ] Implementar o endpoint para a atualizar os jogos.
+- [ ] Implementar o endpoint para a remover os usuários.
+- [ ] Implementar o endpoint para a remover os jogos.
+
+- [ ] Implementar averificação de usuário para acesso ao endpoint.
+
+- [ ] Limitar o acesso ao endpoint de criar usuários apenas ao perfil admin.
+- [ ] Limitar o acesso ao endpoint de criar jogos apenas ao perfil admin.
+- [ ] Limitar o acesso ao endpoint de atualizar usuários apenas ao perfil admin.
+- [ ] Limitar o acesso ao endpoint de atualizar jogos apenas ao perfil admin.
+- [ ] Limitar o acesso ao endpoint de remover usuários apenas ao perfil admin.
+- [ ] Limitar o acesso ao endpoint de remover jogos apenas ao perfil admin.

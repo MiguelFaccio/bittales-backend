@@ -49,7 +49,6 @@
 3- **Escalabilidade:**
  
     - Arquitetura do sistema deve permitir fácil adição de novos jogos e funcionalidades.
-    - Suporte a escalabilidade horizontal para lidar com aumento de tráfego.
  
 4- **Usabilidade:**
  

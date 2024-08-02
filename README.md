@@ -21,27 +21,30 @@
  
 4- **Compatibilidade Multi-Plataforma:**
  
-    - Suporte para desktop, tablets e dispositivos móveis.
-    - Aplicativo móvel dedicado para acesso facilitado aos jogos.
+    - Versões para desktop e dispositivos móveis.
+    - Jogos adaptados, se não for possivel adaptação, fazer jogos diferentes.
+    - Sistema de Rank único para jogadores mobile.
+    - Manter a identidade visual padrão em todos os dispositivos.
  
 6- **Administração:**
     
     - Painel administrativo para adicionar, remover e gerenciar usuários.
     - Painel administrativo para adicionar, remover e gerenciar jogos.
     - Sistema de monitoramento de uso e desempenho dos jogos.
+    - Sistema de monitoramento de usuários.
 
 
 ### Requisitos Não Funcionais
 
 1- **Segurança:**
  
-    - Criptografia de dados sensíveis, como informações de login e detalhes de pagamento.
+    - Criptografia de dados sensíveis, como informações de login.
     - Implementação de autenticação de dois fatores para contas de usuário.
  
 2- **Desempenho:**
- 
-    - Tempo de carregamento das páginas não deve exceder 2 segundos.
-    - Sistema deve suportar até 10.000 usuários simultâneos sem degradação do desempenho.
+    
+    - Evitar ao maximo bugs e uma visão poluida
+    - Verficar sempre após updates se há erros.
  
 3- **Escalabilidade:**
  
@@ -55,7 +58,6 @@
  
 5- **Confiabilidade:**
  
-    - O sistema deve ter uptime de 99,9%.
     - Backups regulares de dados devem ser realizados para evitar perda de informações.
 
 

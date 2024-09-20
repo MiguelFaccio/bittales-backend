@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard BitTales</title>
+    <link rel="stylesheet" href="../cssAdm/dash.css">
+</head>
+<body>
+<div class="container">
+    <!-- Área Principal -->
+    <main class="main-content">
+        <!-- Barra Lateral de Navegação -->
+        <aside class="sidebar">
+            <h1>Dashboard BitTales</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Voltar ao Login</a></li>
+                    <li><a href="#usuarios">Usuários</a></li>
+                    <li><a href="#games">Jogos</a></li>
+                    <li><a href="#conquistas">Conquistas</a></li>
+                    <li><a href="#desafios">Desafios</a></li>
+                    <li><a href="#categoria">Categorias</a></li>
+                    <li><a href="#rank">Rank</a></li>
+                </ul>
+                <img src="../../public/images/pine.png">
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <div class="header">
+                <h2>Bem-vindo ao Dashboard BitTales</h2>
+            </div>
+            <div class="stats">
+                <!-- Aqui você pode adicionar gráficos e números -->
+                <div class="stat-box">
+                    <h3>Estatística 1</h3>
+                    <canvas id="chart1"></canvas>
+                    <p>Valor: X</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Estatística 2</h3>
+                    <canvas id="chart2"></canvas>
+                    <p>Valor: Y</p>
+                </div>
+                <!-- Adicione mais caixas conforme necessário -->
+            </div>
+            <section class="tables">
+                <section id="usuarios">
+                    <h3>Usuários</h3>
+                    <button class="btn-add">Adicionar Novo Usuário</button>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Troféus</th>
+                            <th>Rank</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Dados dos usuários vão aqui -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="games">
+                    <h3>Jogos</h3>
+                    <button class="btn-add">Adicionar Novo Jogo</button>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Data de Lançamento</th>
+                            <th>Categoria</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Dados dos jogos vão aqui -->
+                        </tbody>
+                    </table>
+                </section>
+
+<!--                <section id="conquistas">-->
+<!--                    <h3>Conquistas</h3>-->
+<!--                    <button class="btn-add">Adicionar Nova Conquista</button>-->
+<!--                    <table>-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Nome</th>-->
+<!--                            <th>Descrição</th>-->
+<!--                            <th>Recompensa</th>-->
+<!--                            <th>Jogo</th>-->
+<!--                            <th>Ações</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        &lt;!&ndash; Dados das conquistas vão aqui &ndash;&gt;-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </section>-->
+
+<!--                <section id="desafios">-->
+<!--                    <h3>Desafios</h3>-->
+<!--                    <button class="btn-add">Adicionar Novo Desafio</button>-->
+<!--                    <table>-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Nome</th>-->
+<!--                            <th>Requisito</th>-->
+<!--                            <th>Jogo</th>-->
+<!--                            <th>Ações</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        &lt;!&ndash; Dados dos desafios vão aqui &ndash;&gt;-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </section>-->
+
+                <section id="categoria">
+                    <h3>Categorias</h3>
+                    <button class="btn-add">Adicionar Nova Categoria</button>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Dados das categorias vão aqui -->
+                        </tbody>
+                    </table>
+                </section>
+
+<!--                <section id="rank">-->
+<!--                    <h3>Rank</h3>-->
+<!--                    <button class="btn-add">Adicionar Novo Rank</button>-->
+<!--                    <table>-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Nome</th>-->
+<!--                            <th>Ícone</th>-->
+<!--                            <th>Tema</th>-->
+<!--                            <th>Troféus Mínimos</th>-->
+<!--                            <th>Ações</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        &lt;!&ndash; Dados dos ranks vão aqui &ndash;&gt;-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </section>-->
+            </section>
+        </div>
+    </main>
+</div>
+<script src="../jsAdm/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Exemplo de gráficos com Chart.js
+    const ctx1 = document.getElementById('chart1').getContext('2d');
+    const chart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['A', 'B', 'C', 'D'],
+            datasets: [{
+                label: 'Exemplo de Gráfico 1',
+                data: [10, 20, 30, 40],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('chart2').getContext('2d');
+    const chart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+            datasets: [{
+                label: 'Exemplo de Gráfico 2',
+                data: [15, 25, 35, 45],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
